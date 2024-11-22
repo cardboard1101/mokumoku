@@ -1,0 +1,24 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  background: #000;
+  color: #fff;
+}
+.headerContents {
+  display: flex;
+  align-items: center;
+}
+.headerLogo {
+  flex-grow: 1;
+}
+.headerNav {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+.headerNavItem:not(:first-child) {
+  margin-left: 24px;
+}
