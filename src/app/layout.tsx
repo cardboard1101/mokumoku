@@ -1,4 +1,5 @@
 import Header from "@/components/Header/Header";
+import { WithApolloProvider } from "@/providers/WithApolloProvider";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -25,11 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header />
-        {children}
-      </body>
-    </html>
+    <WithApolloProvider>
+      <html lang="en">
+        <body className={`${geistSans.variable} ${geistMono.variable}`}>
+          <Header />
+          {children}
+        </body>
+      </html>
+    </WithApolloProvider>
   );
 }
